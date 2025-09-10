@@ -119,11 +119,55 @@
                     ?>
                 </div>
             </div>
+            <div class="subCont" id="cont3">
+                <h1>Count from 1 to 100 only even</h1>
+                <div class="countPlace">
+                    <?php
+                    for ($i = 2; $i <= 100; $i+=2) {
+                        echo "<p>$i</p>";
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont4">
+                <h1>Count from 1 to 100 only odd</h1>
+                <div class="countPlace">
+                    <?php
+                    for ($i = 1; $i <= 100; $i+=2) {
+                        echo "<p>$i</p>";
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont5">
+                <h1>sum of numbers from 1 to 100</h1>
+                <div class="countPlace">
+                    <?php
+                    $sum = 0;
+                    for ($i = 1; $i <= 100; $i++) {
+                        $sum += $i;
+                    }
+                    echo "<p>The sum is $sum</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont6">
+                <h1>The product of numbers from 1 to 100</h1>
+                <div class="countPlace">
+                    <?php
+                    $pro = 1;
+                    for ($i = 1; $i <= 100; $i++) {
+                        $pro *= $i;
+                    }
+                    echo "<p>The product of them is $pro</p>";
+                    ?>
+                </div>
+            </div>
             <div class="button fa fa-caret-right" onclick="button(2)"></div>
         </div>
     </div>
     <script>
-        let numOfSlides=2
+        let numOfSlides=6
         let choosenOne=1
         function button(dir){
             if(dir===1){

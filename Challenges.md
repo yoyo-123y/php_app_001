@@ -1,7 +1,7 @@
 ## String Methods
 
 1.  Write a program that takes a user's name and prints it in uppercase.
-2.  Cereate a function that extracts the first three characters from a given string and return the result.
+2.  Create a function that extracts the first three characters from a given string and return the result.
 3.  Check if a word contains the letter `"a"`.
 4.  Replace all spaces in a sentence with `"-"`.
 
