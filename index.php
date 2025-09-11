@@ -95,7 +95,7 @@
             cursor: pointer;
             color: rgba(229, 255, 0, 1);
             font-size: 30px;
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
         }
@@ -263,11 +263,92 @@
                     ?>
                 </div>
             </div>
+            <div class="subCont" id="cont16">
+                <h1>Write a program that prints true if a string starts with `"A"` or ends with `"Z"`</h1>
+                <div class="textPlace">
+                    <?php
+                    $word3= "Apple";
+                    $result2=substr($word3,0,1)==="A"||substr($word3,-1)==="Z";
+                    echo "<p>$word3 ".($result2?'is':'is not')." accepted</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont17">
+                <h1>Test if a number is either negative or greater than 100</h1>
+                <div class="textPlace">
+                    <?php
+                    echo '<p>';
+                    if($num1<0){
+                        echo "$num1 a negative number";
+                    } elseif($num1> 100){
+                        echo "$num1 is greater than 100";
+                    } else{
+                        echo "$num1 between -1 and 101";
+                    }
+                    echo '</p>';
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont18">
+                <h1>Create a condition that is true only if both variables are not empty strings</h1>
+                <div class="textPlace">
+                    <?php
+                    echo "<p>$userName and $u_userName ".($userName!==""&&$u_userName!==""?'are not':'are')." empty</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont19">
+                <h1>Transform english day name or code to arabic name</h1>
+                <div class="textPlace">
+                    <?php
+                        $day='mon';
+                        $day=strtolower(trim($day));
+                        $day_full_name = '';
+                        if ($day === 'sun' || $day === 'sunday') {
+                            $day_full_name = 'الأحد';
+                        } elseif ($day === 'mon' || $day === 'monday') {
+                            $day_full_name = 'الإثنين';
+                        } elseif ($day === 'tue' || $day === 'tuesday') {
+                            $day_full_name = 'الثلاثاء';
+                        } elseif ($day === 'wed' || $day === 'wednesday') {
+                            $day_full_name = 'الأربعاء';
+                        } elseif ($day === 'thu' || $day === 'thursday') {
+                            $day_full_name = 'الخميس';
+                        } elseif ($day === 'fri' || $day === 'friday') {
+                            $day_full_name = 'الجمعة';
+                        } elseif ($day === 'sat' || $day === 'saturday') {
+                            $day_full_name = 'السبت';
+                        } else {
+                            $day_full_name = 'اسم اليوم غير صحيح';
+                        }
+                        echo "<p>$day in arabic is $day_full_name</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont20">
+                <h1>Transform english day name or code to arabic name without ||</h1>
+                <div class="textPlace">
+                    <?php
+                        $day='mon';
+                        $day=strtolower(trim($day));
+                        $day_full_name = match($day){
+                            'sun','sunday'=>'الأحد',
+                            'mon','monday'=>'الأثنين',
+                            'tue','tuesday'=>'الثلاثاء',
+                            'wed','wednesday'=>'الأربعاء',
+                            'thu','thursday'=>'الخميس',
+                            'fri','friday'=>'الجمعة',
+                            'sat','saturday'=>'السبت',
+                        };
+                        echo "<p>$day in arabic is $day_full_name</p>";
+                    ?>
+                </div>
+            </div>
             <div class="button fa fa-caret-right" onclick="button(2)"></div>
         </div>
     </div>
     <script>
-        let numOfSlides=15
+        let numOfSlides=20
         let choosenOne=1
         function button(dir){
             if(dir===1){
