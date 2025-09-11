@@ -216,11 +216,58 @@
                     ?>
                 </div>
             </div>
+            <div class="subCont" id="cont11">
+                <h1>Check if the two numbers equal each other</h1>
+                <div class="textPlace">
+                    <?php
+                    $num1= 60;
+                    $num2= 40;
+                    echo "<p>$num1 is ".($num1===$num2?"equal":"not equal")." to $num2</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont12">
+                <h1>Check if the number is greater than 50</h1>
+                <div class="textPlace">
+                    <?php
+                    echo "<p>$num1 is ".($num1>50?'greater':'smaller').' than 50</p>';
+                    echo "<p>$num2 is ".($num2>50?'greater':'smaller').' than 50</p>';
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont13">
+                <h1>Check if 2 variables have diffrent value</h1>
+                <div class="textPlace">
+                    <?php
+                    echo "<p>$userName is ".($userName===$l_userName?'the same as':'diffrent from')." $l_userName</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont14">
+                <h1>Check if a number is between 10 and 20 (inclusive)</h1>
+                <div class="textPlace">
+                    <?php
+                    $num3=30;
+                    echo "<p>$num3 ".(($num3>=10 && $num3<=20)?'is':'is not')." between 10 and 20</p>";
+                    ?>
+                </div>
+            </div>
+            <div class="subCont" id="cont15">
+                <h1>Determine if a person is eligible to vote (age >= 18) and is a citizen</h1>
+                <div class="textPlace">
+                    <?php
+                    $isCitizen =false;
+                    $age = 18;
+                    echo "<p>His age is $age years old and ".($isCitizen?'is':'is not')." a citizen</p>";
+                    echo "<p>He ".(($age>=18 && $isCitizen)?'is':'is not')." eligible to vote</p>";
+                    ?>
+                </div>
+            </div>
             <div class="button fa fa-caret-right" onclick="button(2)"></div>
         </div>
     </div>
     <script>
-        let numOfSlides=10
+        let numOfSlides=15
         let choosenOne=1
         function button(dir){
             if(dir===1){
